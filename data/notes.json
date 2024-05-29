@@ -2,8 +2,103 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "title": "Introduction to React",
+      "author": "Dan Abramov"
+    },
+    {
+      "id": 2,
+      "title": "Advanced CSS",
+      "author": "Jen Simmons"
+    },
+    {
+      "id": 3,
+      "title": "JavaScript Best Practices",
+      "author": "Douglas Crockford"
+    },
+    {
+      "id": 4,
+      "title": "Understanding TypeScript",
+      "author": "Anders Hejlsberg"
+    },
+    {
+      "id": 5,
+      "title": "Building REST APIs",
+      "author": "Roy Fielding"
+    },
+    {
+      "id": 6,
+      "title": "GraphQL for Beginners",
+      "author": "Lee Byron"
+    },
+    {
+      "id": 7,
+      "title": "Mastering Git",
+      "author": "Linus Torvalds"
+    },
+    {
+      "id": 8,
+      "title": "Python Programming",
+      "author": "Guido van Rossum"
+    },
+    {
+      "id": 9,
+      "title": "Database Design",
+      "author": "E. F. Codd"
+    },
+    {
+      "id": 10,
+      "title": "Learning Docker",
+      "author": "Solomon Hykes"
+    },
+    {
+      "id": 11,
+      "title": "Kubernetes Basics",
+      "author": "Craig McLuckie"
+    },
+    {
+      "id": 12,
+      "title": "Cloud Computing",
+      "author": "Werner Vogels"
+    },
+    {
+      "id": 13,
+      "title": "Cybersecurity Essentials",
+      "author": "Bruce Schneier"
+    },
+    {
+      "id": 14,
+      "title": "AI and Machine Learning",
+      "author": "Andrew Ng"
+    },
+    {
+      "id": 15,
+      "title": "Data Science with R",
+      "author": "Hadley Wickham"
+    },
+    {
+      "id": 16,
+      "title": "Functional Programming",
+      "author": "Rich Hickey"
+    },
+    {
+      "id": 17,
+      "title": "Responsive Web Design",
+      "author": "Ethan Marcotte"
+    },
+    {
+      "id": 18,
+      "title": "Introduction to Node.js",
+      "author": "Ryan Dahl"
+    },
+    {
+      "id": 19,
+      "title": "Software Architecture",
+      "author": "Martin Fowler"
+    },
+    {
+      "id": 20,
+      "title": "Clean Code",
+      "author": "Robert C. Martin"
     }
   ],
   "comments": [

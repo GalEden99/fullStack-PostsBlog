@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Pagination from "./components/Pagination";
 
 interface Post {
   id: number;
@@ -42,6 +43,7 @@ export default function Home() {
           ))}
         </ul>
       )}
+      <Pagination />
     </div>
   );
 }

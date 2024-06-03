@@ -45,15 +45,16 @@ export default function Home() {
       {error ? (
         <p>Error: {error}</p>
       ) : (
-        <ul>
+        <div className="container">
           {posts.map((post) => (
-            <li key={post.id} id={post.id.toString()} className="post">
+            <div className="post" id={post.id.toString()}>
               <h2>{post.title}</h2>
-              <p>{post.author}</p>
-              <p>{post.id}</p>
-            </li>
+              <small>{post.author}</small>
+              <br />
+              Content for note {post.id}
+            </div>
           ))}
-        </ul>
+        </div>
       )}
       <Pagination page={page} onClick={handleChangedPage} numPages={maxPage} />
     </div>

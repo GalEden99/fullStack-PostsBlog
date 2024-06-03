@@ -45,7 +45,7 @@ export default function Home() {
       ) : (
         <ul>
           {posts.map((post) => (
-            <li key={post.id}>
+            <li key={post.id} id={post.id.toString()} className="post">
               <h2>{post.title}</h2>
               <p>{post.author}</p>
               <p>{post.id}</p>

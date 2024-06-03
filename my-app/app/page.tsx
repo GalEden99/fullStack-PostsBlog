@@ -42,6 +42,7 @@ export default function Home() {
   return (
     <div>
       <h1>Posts Page</h1>
+      <Pagination className="topPagination" page={page} onClick={handleChangedPage} numPages={maxPage}  />
       {error ? (
         <p>Error: {error}</p>
       ) : (
@@ -56,7 +57,7 @@ export default function Home() {
           ))}
         </div>
       )}
-      <Pagination page={page} onClick={handleChangedPage} numPages={maxPage} />
+      <Pagination className="bottomPagination" page={page} onClick={handleChangedPage} numPages={maxPage} />
     </div>
   );
 }

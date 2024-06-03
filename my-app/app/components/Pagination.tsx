@@ -3,6 +3,7 @@ import React from "react";
 import PageButton from "./PageButton";
 
 export default function Pagination(props: {
+  className: string;
   page: number;
   onClick: (id: number) => void;
   numPages: number;
@@ -14,7 +15,7 @@ export default function Pagination(props: {
   const firstPage = Math.min(Math.max(1, currPage - 2), totalPages - 4);
 
   return (
-    <div className="pagination">
+    <div className={"pagination " + props.className}>
       <button name="first" onClick={() => props.onClick(1)}>
         First
       </button>

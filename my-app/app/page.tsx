@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import Pagination from "./components/Pagination";
 import { pages } from "next/dist/build/templates/app-page";
 
+import axios from "axios";
+
 interface Post {
   id: number;
   title: string;
@@ -15,27 +17,27 @@ export default function Home() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [page, setPage] = useState(1);
+  const [maxPage, setMaxPage] = useState(0);
 
   function handleChangedPage(id: number) {
     setPage(id);
   }
 
-  async function getPosts() {
-    const response = await fetch(
-      URL + "?id_gte=" + (10 * page - 9) + "&id_lte=" + 10 * page
-    );
-    if (!response.ok) {
-      throw new Error(`Error! status: ${response.status}`);
-    }
-    const data = await response.json();
-    return data;
-  }
-
   useEffect(() => {
-    getPosts()
-      .then((data) => setPosts(data))
+    const promise = axios.get(URL, {
+      params: {
+        _page: page,
+        _per_page: 10,
+      },
+    });
+    promise
+      .then((response) => {
+        console.log(response);
+        setMaxPage(Math.ceil(response.headers["x-total-count"] / 10));
+        setPosts(response.data);
+      })
       .catch((err) => setError(err.message));
-  });
+  }, [page]);
 
   return (
     <div>
@@ -53,7 +55,7 @@ export default function Home() {
           ))}
         </ul>
       )}
-      <Pagination page={page} onClick={handleChangedPage} />
+      <Pagination page={page} onClick={handleChangedPage} numPages={maxPage} />
     </div>
   );
 }

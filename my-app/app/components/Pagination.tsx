@@ -12,7 +12,7 @@ export default function Pagination(props: {
   const totalPages = props.numPages;
   const paginationLen = totalPages > 5 ? 5 : totalPages;
   //const firstPage = (totalPages > 3) ? currPage - 2 : 1;
-  const firstPage = Math.min(Math.max(1, currPage - 2), totalPages - 4);
+  const firstPage = Math.max(1, Math.min(totalPages - 4, currPage - 2));
 
   return (
     <div className={"pagination " + props.className}>

@@ -4,5 +4,3 @@ node_modules/
 # Ignore .next directory
 .next/
 
-# Ignore all JSON files
-*.json

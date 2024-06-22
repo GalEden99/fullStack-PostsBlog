@@ -1,0 +1,146 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+
+h1 {
+  margin-top: 60px;
+  padding: 0 20px;
+  text-align: center;
+  color: #3498db;
+  /* font-weight: 600; */
+  font: 3.5rem "Roboto", sans-serif;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.topPagination {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.bottomPagination {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.pagination button {
+  color: #333;
+  font-weight: 500;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1rem;
+}
+
+.pagination button.active {
+  background-color: #3498db;
+  color: white;
+  border-color: #2980b9;
+}
+
+.pagination button:hover:not(.active) {
+  background-color: #ddd;
+  color: #333;
+  font-weight: 600;
+}
+
+.post {
+  background: linear-gradient(135deg, #3498db, rgb(61, 177, 254));
+  padding: 20px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  color: #ffffff;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.post h2 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #ffffff;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 5px;
+}
+
+.post p {
+  font-size: 0.5em;
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+.post p.author {
+  font-style: italic;
+  color: #ffecd2;
+}
+
+.post .id {
+  font-size: 0.8em;
+  color: #ffecd2;
+}
+
+.post .button-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.post button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post button:hover {
+  background-color: #ff3f3f;
+}

@@ -1,0 +1,32 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "title": "Introduction to React",
+      "author": { "name": "Dan Abramov", "email": "dan@mail.com" },
+      "content": "This is a note about React"
+    },
+    {
+      "id": 2,
+      "title": "Advanced CSS",
+      "author": { "name": "John Doe", "email": "john?@mail.com" },
+      "content": "This is a note about CSS"
+    },
+    {
+      "id": 3,
+      "title": "Introduction to Redux",
+      "author": { "name": "Omer Abramov", "email": "omer@mail.com" },
+      "content": "This is a note about Redux"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
